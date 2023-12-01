@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgressTest2023.View.Grid"
+             Title="Grid">
+    <Grid ColumnSpacing="10" RowSpacing="10" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition />
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--<Label Text="Hello" BackgroundColor="red"
+               Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+        <Label Text="Hello" BackgroundColor="yellow"
+                Grid.Row="0" Grid.Column="1"/>
+        <Label Text="Hello" BackgroundColor="Aqua"
+                Grid.Row="0" Grid.Column="2"/>
+
+        <Label Text="Hello" BackgroundColor="Aquamarine"
+                Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Label Text="Hello" BackgroundColor="Chartreuse"
+                Grid.Row="2" Grid.Column="0"/>
+        <Label Text="Hello" BackgroundColor="DarkGoldenrod"
+                Grid.Row="2" Grid.Column="1"/>
+        <Label Text="Hello" BackgroundColor="Purple"
+                Grid.Row="2" Grid.Column="2"/>-->
+
+        <BoxView Color="Green"/>
+        <Label Text="Row 0 Column 0" HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        
+        <BoxView Grid.Column="1"  Color="Aqua"/>
+        <Label Grid.Column="1" Text="Row 0 Column 1" HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        
+        <BoxView Grid.Row="1"  Color="Teal"/>
+        <Label Grid.Row="1" Text="Row 1 Column 0" HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        <BoxView Grid.Row="1" Grid.Column="1"  Color="Yellow"/>
+        <Label Grid.Column="1" Grid.Row="1" Text="Row 1 Column 1" HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        <BoxView Grid.Row="2" Grid.ColumnSpan="2"  Color="Red"/>
+        <Label Grid.Row="2" Grid.ColumnSpan="2" Text="Row 2 Column 0 and 1" HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+
+    </Grid>
+</ContentPage>

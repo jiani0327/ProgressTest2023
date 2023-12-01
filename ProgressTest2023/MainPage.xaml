@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"            
+             x:Class="ProgressTest2023.MainPage"
+             BackgroundColor="#383b67"
+             Shell.NavBarIsVisible="False"/>
+<ScrollView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <!-- Add more rows as needed -->
+        </Grid.RowDefinitions>
+
+        <!-- a) Rounded profile picture with color border -->
+        <Frame Grid.Row="0" Margin="0,20,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110"  HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
+            <Image Source="people.jpg" />
+        </Frame>
+
+        <Label Grid.Row="1" Text="Vincent Van Gogh" FontAttributes="Bold" TextColor="NavajoWhite" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="32"/>
+
+        <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Label Grid.Column="1" Text=" Dutck,1953-1890" FontSize="15" TextColor="White"/>
+        </Grid>
+
+        <Label Grid.Row="3" Text="Vincent Willem van Gogh was a Dutch Post-Impressionist 
+                   painter who is among the most famous and influential figures in the history of Western art...Read more"
+                   TextColor="NavajoWhite"/>
+
+
+        <!-- c) Grid with equal width -->
+        <BoxView Grid.Row="5" Color="DarkGrey"/>
+        <Grid Grid.Row="5" HorizontalOptions="Center" ColumnSpacing="40"  Margin="0,10,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <StackLayout Grid.Column="0">
+                <Label Text="$7.5m" TextColor="White" HorizontalOptions="Center" />
+                <Label Grid.Column="0" Text="Record" TextColor="White" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1">
+                <Label Text="$3.5m" TextColor="White" HorizontalOptions="Center" />
+                <Label Grid.Column="1" Text="Average" TextColor="White" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="2">
+                <Label Text="+598%" TextColor="White" HorizontalOptions="Center" />
+                <Label Grid.Column="2" Text="General" TextColor="White"  />
+            </StackLayout>
+
+            <StackLayout Grid.Column="3">
+                <Label Text="12" TextColor="White" HorizontalOptions="Center" />
+                <Label Grid.Column="3" Text="Items" TextColor="White"/>
+            </StackLayout>
+        </Grid>
+
+        <!-- d) Use Grid or CollectionView. -->
+        <Grid Grid.Row="6">
+            <Label Text="Other Vann Works" FontAttributes="Bold" TextColor="White"></Label>
+        </Grid>
+        <Grid Grid.Row="6" ColumnSpacing="10" RowSpacing="10" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Image Source="image1.jpeg" 
+           Aspect="AspectFit" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           HeightRequest="300"/>
+
+                <Label Text="Your Text Here" 
+           FontAttributes="Bold" 
+           TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Image Source="image2.jpeg" 
+               Aspect="AspectFit" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+                <Label Text="Your Text Here" 
+           FontAttributes="Bold" 
+           TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Image Source="image3.jpeg" 
+               Aspect="AspectFit" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+                HeightRequest="150"/>
+                <Label Text="Your Text Here" 
+           FontAttributes="Bold" 
+           TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Image Source="image4.jpeg" 
+               Aspect="AspectFit" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+                <Label Text="Your Text Here" 
+           FontAttributes="Bold" 
+           TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</ScrollView>
+   
+   
+
